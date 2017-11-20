@@ -1,0 +1,107 @@
+﻿@model Thaicarontour2.Models.User
+
+@{
+    ViewBag.Title = "Editprofile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+
+@using (Html.BeginForm())
+{
+
+
+
+<body>
+
+    <div class="container">
+        <h1>Edit Profile</h1>
+        <hr>
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img class="avatar img-circle" alt="avatar" src="http://www.mx7.com/i/0ea/bcLtXd.png" width="90px" height="90px">
+                    <h6><font color="#FFFFFF">ใส่รูปภาพ</font></h6>
+
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+
+
+            <div class="col-md-9 personal-info">
+                <div class="alert alert-info alert-dismissable">
+                    <a class="panel-close close" data-dismiss="alert">×</a>
+                    <i class="fa fa-coffee"></i>
+                    <marquee>กรุณากรอกข้อมูลให้ถูกต้อง อย่าให้ผู้อื่นรู้รหัสผ่านของท่าน หากท่านมีปัญหาในการใช้งานท่านสามารถสอบถามได้ที่ เมนู "ติดต่อเรา"</marquee>
+                </div>
+                <h3>แก้ไขข้อมูล</h3>
+
+
+                <form class="form-horizontal" role="form">
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">Your Name:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="Name_Edit" value="@Model.Name" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">Your Email:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="email"name="Email_Edit" value="@Model.Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">บ้านเลขที่:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="House_number_Edit" value="@Model.House_number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">ตำบล:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="District_Edit" value="@Model.District">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">อำเภอ:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="Area_Edit" value="@Model.Area">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">จังหวัด:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="province_Edit" value="@Model.province">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label"><font color="#FFFFFF">รหัสไปร์ษณีย์:</font></label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text"name="Codeid_Edit" value="@Model.Codeid">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+                            <input class="btn btn-primary" type="submit" value="Save Changes">
+                            <span></span>
+                            <input class="btn btn-default" type="reset" value="Cancel"onclick="location.href='@Url.Action("Index", "Index")';">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+</body>
+}
+</html>

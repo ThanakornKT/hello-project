@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+ 
+    </head>
+@using (Html.BeginForm())
+{
+    <body >
+        <br><br><br><br><br><br><br>
+        
+        <h3 align='center'>
+            <img src="http://www.mx7.com/i/2ef/FsPVV6.png" Width="500px" Height="300px" />
+            <br><br>
+            <form action="/action_page.php">
+                
+                    <font color="#FFFFFF">Email:&nbsp;&nbsp;&nbsp;&nbsp;</font> <input type="email" name="Email" style="background: rgba(253, 253, 253, 0);width:200px; height:30px;font: 16pt AngsanaUPC" style="color: rgba(255, 254, 254, 0)" placeholder="ชื่อผู้ใช้" size=7 value=""><br>
+                    <font color="#FFFFFF">รหัสผ่าน:</font> <input type="password" name="Password" style="background: rgba(255, 254, 254, 0);width:200px; height:30px;font: 16pt AngsanaUPC" style="width:200px;height:30px;" placeholder="รหัสผ่าน" style="color: rgb(0, 0, 0)" style="font: 5pt AngsanaUPC" size=7 maxlength=12 value=""><br><br>
+                <P style="color:red">@ViewBag.Message </p>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">LOGIN</button>
+                    <button type="button" class="btn btn-primary"onclick="location.href='@Url.Action("RegistorUser", "RegistorUser")';"> เข้าสู่ระบบ</button>
+                    <button type="button" class="btn btn-primary"onclick="location.href='@Url.Action("RegistorDriver", "RegistorDriver")';"> สมัครสมาชิกคนขับรถ</button>
+                </div> 
+                <br />
+                @*<button1 type="summit" class="btn btn-default">@Html.ActionLink("เข้าสู่ระบบ", "cartype", "Index")</button1> 
+                <button2 type="button" class="btn btn-default">@Html.ActionLink("สมัครสมาชิก", "RegistorUser", "Registor")</button2>
+                <button2 type="button" class="btn btn-default">@Html.ActionLink("สมัครสมาชิกคนขับรถ", "RegistorDriver", "RegistorDriver")</button2>*@
+                
+   </form>
+        </h3>
+        
+    </body>
+}
+</html>
